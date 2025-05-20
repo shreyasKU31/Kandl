@@ -4,10 +4,12 @@ import NavElements from "./NavElements";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between">
-      <NavLogo />
-      <NavElements />
-    </nav>
+    <div className="w-full  border-b-2 border-gray-200">
+      <nav className="lg:max-w-5xl m-auto flex justify-between items-center px-5 pb-1 mt-2 ">
+        <NavLogo />
+        <NavElements />
+      </nav>
+    </div>
   );
 };
 
