@@ -17,6 +17,7 @@ import stepsAcop from "./steps-acop.svg";
 import stocksAcop from "./stocks-acop.svg";
 import varsityProducts from "./varsity-products.png";
 import wordLogo from "./wordLogo.svg";
+import press from "./press.png";
 
 const assets = {
   account_open,
@@ -38,6 +39,7 @@ const assets = {
   stocksAcop,
   varsityProducts,
   wordLogo,
+  press,
 };
 
 export default assets;

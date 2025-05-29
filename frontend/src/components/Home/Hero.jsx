@@ -1,10 +1,10 @@
 import React from "react";
 import assets from "../../assets/assets";
-import Button from "../Button";
+import Button from "../Buttons/Button";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-15">
       <div className="my-15">
         <img className="w-5xl" src={assets.landing} alt="" />
       </div>
