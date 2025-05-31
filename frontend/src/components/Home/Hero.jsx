@@ -1,4 +1,3 @@
-import React from "react";
 import assets from "../../assets/assets";
 import Button from "../Buttons/Button";
 

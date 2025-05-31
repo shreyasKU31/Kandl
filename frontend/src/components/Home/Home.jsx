@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "./Hero";
 import Trust from "./Trust";
 import Pricing from "./Pricing";

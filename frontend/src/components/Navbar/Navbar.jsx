@@ -1,4 +1,3 @@
-import React from "react";
 import NavLogo from "./NavLogo";
 import NavElements from "./NavElements";
 
