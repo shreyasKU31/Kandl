@@ -4,7 +4,7 @@ import Links from "../Buttons/Links";
 
 const Trust = () => {
   return (
-    <div className="mt-25 mb-10">
+    <div className="mt-25 mb-25">
       <div className="flex justify-between gap-15">
         <div className="w-2/5">
           <h2 className="text-3xl font-medium">Trust with confidence</h2>

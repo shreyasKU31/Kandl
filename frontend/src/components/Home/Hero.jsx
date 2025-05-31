@@ -5,7 +5,7 @@ import Button from "../Buttons/Button";
 const Hero = () => {
   return (
     <div className="flex flex-col items-center mb-15">
-      <div className="my-15">
+      <div className="my-20">
         <img className="w-5xl" src={assets.landing} alt="" />
       </div>
       <div className="text-center mb-15">
