@@ -9,7 +9,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 
 const Footer = () => {
   return (
-    <div className=" bg-gray-100 px-8">
+    <div className="w-full bg-gray-100 px-8">
       <div className="w-5xl m-auto py-8">
         <div className="flex gap-8">
           <div>

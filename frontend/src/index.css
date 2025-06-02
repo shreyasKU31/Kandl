@@ -6,3 +6,7 @@
 .liMobile {
   @apply py-2 hover:bg-green-100;
 }
+
+.main-content {
+  @apply min-h-max;
+}
