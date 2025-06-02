@@ -18,6 +18,7 @@ import stocksAcop from "./stocks-acop.svg";
 import varsityProducts from "./varsity-products.png";
 import wordLogo from "./wordLogo.svg";
 import press from "./press.png";
+import indFlag from "./flag.png";
 
 const assets = {
   account_open,
@@ -40,6 +41,7 @@ const assets = {
   varsityProducts,
   wordLogo,
   press,
+  indFlag,
 };
 
 export default assets;
