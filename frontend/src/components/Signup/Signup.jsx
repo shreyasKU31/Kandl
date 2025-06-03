@@ -1,5 +1,6 @@
 import assets from "../../assets/assets";
 import Button from "../Buttons/Button";
+import Investment from "./Investment";
 
 const Signup = () => {
   return (
@@ -41,6 +42,7 @@ const Signup = () => {
           </p>
         </div>
       </div>
+      <Investment />
     </div>
   );
 };
