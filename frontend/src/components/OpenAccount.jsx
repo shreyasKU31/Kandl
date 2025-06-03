@@ -1,4 +1,5 @@
 import Button from "./Buttons/Button";
+import { Link } from "react-router-dom";
 
 const OpenAccount = () => {
   return (
@@ -8,7 +9,9 @@ const OpenAccount = () => {
         Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O
         trades.
       </p>
-      <Button text={"Sign up for free"} />
+      <Link to="/signup">
+        <Button text={"Sign up for free"} />
+      </Link>
     </div>
   );
 };

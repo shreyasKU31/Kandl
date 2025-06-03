@@ -5,7 +5,7 @@ const Investment = () => {
   return (
     <div className="mt-20 flex flex-col items-center mb-20">
       <h2 className="text-4xl mb-20 text-center">
-        Investment options with Zerodha demat account
+        Investment options with Kandl demat account
       </h2>
       <div className="grid grid-cols-2 gap-10 mb-8 m-auto">
         <div className="flex items-center gap-8">

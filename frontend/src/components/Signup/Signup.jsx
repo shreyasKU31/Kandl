@@ -6,7 +6,7 @@ const Signup = () => {
   return (
     <div className="m-auto w-5xl px-8">
       <div className="text-center">
-        <h1 className="text-5xl mb-8 mt-16">
+        <h1 className="text-5xl mb-10 mt-16">
           Open a free demat and trading account online
         </h1>
         <p className="text-lg mb-8">
@@ -27,12 +27,12 @@ const Signup = () => {
             <div className="flex">
               <div className="flex items-center gap-2 mb-4 border border-gray-400 p-4 border-r-0">
                 <img src={assets.indFlag} alt="" />
-                <span className="text-xl">+91</span>
+                <span className="text-xl pr-4">+91</span>
               </div>
               <input
                 type="number"
                 placeholder="Enter your mobile number"
-                className="border border-gray-400 w-60 p-4 block mb-4 text-xl appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                className="border border-gray-400 p-4 block mb-4 text-xl appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none w-full focus:outline-none focus:border-green-400 rounded-r"
               />
             </div>
             <Button text={"Get OTP"} />

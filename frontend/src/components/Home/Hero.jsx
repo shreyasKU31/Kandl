@@ -3,8 +3,8 @@ import Button from "../Buttons/Button";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center mb-15 pt-20">
-      <div className="my-20">
+    <div className="flex flex-col items-center mb-15 pt-10">
+      <div className="my-15">
         <img className="w-5xl" src={assets.landing} alt="" />
       </div>
       <div className="text-center mb-15">

@@ -9,7 +9,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-gray-100 px-8">
+    <div className="w-full bg-gray-100 px-8 border-t border-gray-300">
       <div className="w-5xl m-auto py-8">
         <div className="flex gap-8">
           <div>
@@ -17,17 +17,17 @@ const Footer = () => {
             <p>&copy; 2020 - 2025, Kandl Broking Ltd.</p>
             <p>All rights reserved.</p>
             <div className="mt-4">
-              <div className="flex gap-4">
-                <XIcon />
-                <FacebookIcon />
-                <InstagramIcon />
-                <LinkedInIcon />
+              <div className="flex gap-4 ">
+                <XIcon className="hover:text-green-400" />
+                <FacebookIcon className="hover:text-green-400" />
+                <InstagramIcon className="hover:text-green-400" />
+                <LinkedInIcon className="hover:text-green-400" />
               </div>
               <hr className="text-gray-300 my-3" />
               <div className="flex gap-4">
-                <YouTubeIcon />
-                <WhatsAppIcon />
-                <TelegramIcon />
+                <YouTubeIcon className="hover:text-green-400" />
+                <WhatsAppIcon className="hover:text-green-400" />
+                <TelegramIcon className="hover:text-green-400" />
               </div>
             </div>
           </div>
@@ -35,41 +35,41 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4">Account</h4>
               <ul className="text-gray-500">
-                <li>Open demat account</li>
-                <li>Minor demat account</li>
-                <li>NRI demat account</li>
-                <li>Commodity</li>
-                <li>Dematerialisation</li>
+                <li className="mb-2">Open demat account</li>
+                <li className="mb-2">Minor demat account</li>
+                <li className="mb-2">NRI demat account</li>
+                <li className="mb-2">Commodity</li>
+                <li className="mb-2">Dematerialisation</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Support</h4>
               <ul className="text-gray-500">
-                <li>Contact us</li>
-                <li>Support portal</li>
-                <li>How to file a complaint?</li>
-                <li>Status of your complaints</li>
-                <li>Bulletin</li>
+                <li className="mb-2">Contact us</li>
+                <li className="mb-2">Support portal</li>
+                <li className="mb-2">How to file a complaint?</li>
+                <li className="mb-2">Status of your complaints</li>
+                <li className="mb-2">Bulletin</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="text-gray-500">
-                <li>About</li>
-                <li>Philosophy</li>
-                <li>Press & media</li>
-                <li>Careers</li>
-                <li>Open source</li>
+                <li className="mb-2">About</li>
+                <li className="mb-2">Philosophy</li>
+                <li className="mb-2">Press & media</li>
+                <li className="mb-2">Careers</li>
+                <li className="mb-2">Open source</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Quick links</h4>
               <ul className="text-gray-500">
-                <li>Upcoming IPOs</li>
-                <li>Brokerage charges</li>
-                <li>Market holidays</li>
-                <li>Economic calendar</li>
-                <li>Calculators</li>
+                <li className="mb-2">Upcoming IPOs</li>
+                <li className="mb-2">Brokerage charges</li>
+                <li className="mb-2">Market holidays</li>
+                <li className="mb-2">Economic calendar</li>
+                <li className="mb-2">Calculators</li>
               </ul>
             </div>
           </div>
