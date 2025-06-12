@@ -37,7 +37,7 @@ const Investment = () => {
           </div>
         </div>
       </div>
-      <button className="bg-green-400 font-medium rounded text-white py-2 px-8 text-lg transition duration-250 hover:bg-black">
+      <button className="bg-green-400 font-medium rounded text-white py-2 px-8 text-lg transition duration-250 hover:bg-black hover:cursor-pointer">
         Explore Investment
       </button>
     </div>
