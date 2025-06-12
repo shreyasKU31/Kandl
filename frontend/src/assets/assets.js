@@ -20,6 +20,7 @@ import wordLogo from "./wordLogo.svg";
 import press from "./press.png";
 import indFlag from "./flag.png";
 import shreyas from "./shreyas.png";
+import api from "./api.svg";
 
 const assets = {
   account_open,
@@ -44,6 +45,7 @@ const assets = {
   press,
   indFlag,
   shreyas,
+  api,
 };
 
 export default assets;
