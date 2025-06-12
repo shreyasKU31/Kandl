@@ -76,14 +76,17 @@ const Footer = () => {
         </div>
         <div className="text-[12px] text-gray-500 w-5xl m-auto pt-6 pb-6">
           <p className="mb-4">
-            Kandl Broking Ltd.: Member of SSE, CSE & KCX - BEBI Registration
-            no.: INZ00001234 CDDL/NEL: Depository services through Kandl Broking
-            Ltd. - SEBI Registration no.: IN-DP-431-2019 Commodity Trading
-            through Kandl Commodities Pvt. Ltd. MCX: 46025; NSE-50001 - SEBI
-            Registration no.: INZ000038238 Registered Address: Kandl Broking
-            Ltd., #11/13, 4th Cross, Rupee Colony, Opp. Public School, P.P Nagar
-            10th Phase, Bengaluru - 560122, Karnataka, India. For any complaints
-            pertaining to securities broking please write to
+            Kandl Broking Ltd. is a registered member of SISX, CAX, and KTX,
+            offering zero-brokerage trading services across equity and
+            commodities. Depository and custodian services are provided through
+            our integrated platform under registration with the Board of
+            Exchange & Broking Institutions (BEBI), bearing Registration Nos.
+            INZ00001234 and IN-DP-431-2019. Commodity trading is facilitated via
+            Kandl Commodities Pvt. Ltd. under MTX Code 46025 and NST Code 50001.
+            Our corporate office is located at #11/13, 4th Cross, Rupee Colony,
+            Opp. Nova Public School, P.P Nagar 10th Phase, Bengalurex – 560122,
+            Karnatia, Indira. For any complaints pertaining to securities
+            broking please write to
             <span className="text-green-400"> complaints@Kandl.com</span>, for
             DP related to
             <span className="text-green-400"> dp@Kandl.com. </span>
@@ -91,10 +94,13 @@ const Footer = () => {
             prescribed by BEBI | IYF
           </p>
           <p className="mb-4">
-            Procedure to file a complaint on SEBI SCORES: Register on SCORES
-            portal. Mandatory details for filing complaints on SCORES: Name,
-            PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
-            Communication, Speedy redressal of the grievances
+            Clients are advised to read the Risk Awareness Document as outlined
+            by BEBI and the International Yield Federation (IYF) before trading.
+            To file grievances, register on the BEBI GRIP portal
+            (https://grip.bebi.org.in) with essential details including your
+            name, TIN, address, mobile number, and email ID. The GRIP platform
+            enables transparent communication and faster resolution of
+            complaints, ensuring a secure and regulated trading experience.
           </p>
           <p className="text-green-400">
             Smart Online Dispute Resolution | Grievances Redressal Mechanism
