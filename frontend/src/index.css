@@ -10,3 +10,7 @@
 .main-content {
   @apply min-h-max;
 }
+
+.text-green {
+  @apply text-green-500 font-medium;
+}

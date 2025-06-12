@@ -15,10 +15,10 @@ const NavElements = () => {
           <Link to="/signup"> Signup</Link>
         </li>
         <li className="li">
-          <Link to="/product"> Products</Link>
+          <Link to="/about"> About</Link>
         </li>
         <li className="li">
-          <Link to="/about"> About</Link>
+          <Link to="/product"> Products</Link>
         </li>
         <li className="li">
           <Link to="/pricing"> Pricing</Link>

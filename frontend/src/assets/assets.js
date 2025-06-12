@@ -19,6 +19,7 @@ import varsityProducts from "./varsity-products.png";
 import wordLogo from "./wordLogo.svg";
 import press from "./press.png";
 import indFlag from "./flag.png";
+import shreyas from "./shreyas.png";
 
 const assets = {
   account_open,
@@ -42,6 +43,7 @@ const assets = {
   wordLogo,
   press,
   indFlag,
+  shreyas,
 };
 
 export default assets;
