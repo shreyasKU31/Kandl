@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavElements = () => {
   const [ismobile, setisMobile] = useState(false);
@@ -12,19 +12,54 @@ const NavElements = () => {
       {/* Desktop Menu */}
       <ul className="w-fit flex gap-4 max-md:hidden">
         <li className="li">
-          <Link to="/signup"> Signup</Link>
+          <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-medium" : ""
+            }
+          >
+            Signup
+          </NavLink>
         </li>
         <li className="li">
-          <Link to="/about"> About</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-medium" : ""
+            }
+          >
+            About
+          </NavLink>
         </li>
         <li className="li">
-          <Link to="/product"> Products</Link>
+          <NavLink
+            to="/product"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-medium" : ""
+            }
+          >
+            Products
+          </NavLink>
         </li>
         <li className="li">
-          <Link to="/pricing"> Pricing</Link>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-medium" : ""
+            }
+          >
+            Pricing
+          </NavLink>
         </li>
         <li className="li">
-          <Link to="/support"> Support</Link>
+          <NavLink
+            to="/support"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-medium" : ""
+            }
+          >
+            Support
+          </NavLink>
         </li>
       </ul>
 
