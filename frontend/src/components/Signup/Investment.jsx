@@ -1,5 +1,4 @@
 import assets from "../../assets/assets";
-import Button from "../Buttons/Button";
 
 const Investment = () => {
   return (
