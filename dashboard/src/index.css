@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.card {
+  @apply flex gap-4 items-center shadow-xl/10 py-2 px-4 rounded-xl border-2 border-gray-50 transition-all duration-350 hover:scale-110 hover:cursor-pointer;
+}

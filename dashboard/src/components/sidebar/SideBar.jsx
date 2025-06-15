@@ -1,7 +1,5 @@
-import React from "react";
-
 const SideBar = () => {
-  return <div>SideBar</div>;
+  return <div className="border-2 border-green-400 h-screen">SideBar</div>;
 };
 
 export default SideBar;
