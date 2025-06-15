@@ -1,5 +1,9 @@
 const Main = () => {
-  return <div className="border-2 border-amber-400">Main</div>;
+  return (
+    <div className="bg-white/10 backdrop-blur-md shadow-2xl py-2 px-4 rounded-xl border border-white/20 h-full">
+      Main
+    </div>
+  );
 };
 
 export default Main;
