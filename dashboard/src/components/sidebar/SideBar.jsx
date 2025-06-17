@@ -25,9 +25,7 @@ const SideBar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive
-                ? " text-white font-medium bg-green-400 rounded hover:bg-green-400"
-                : ""
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
             }
           >
             <Element icon={<HomeFilledIcon />} text={"Home"} />
