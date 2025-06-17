@@ -7,11 +7,14 @@ const Holdings = () => {
   const handleView = () => setPrice(!price);
   return (
     <div>
+      <div>
+        <h2 className="text-3xl font-medium py-2 mb-8 border-b-2">Holdings</h2>
+      </div>
       <div className="holdings font-medium">
         <p className="text-left">Ticker Name</p>
         <p>Quantity</p>
-        <p>Average Price</p>
-        <p>Total Price</p>
+        <p className="max-lg:hidden">Average Price</p>
+        <p className="max-lg:hidden">Total Price</p>
         <p className="hover:cursor-pointer" onClick={handleView}>
           {price ? "Net Returns" : "Net Amount"}
         </p>
@@ -26,11 +29,13 @@ const Holdings = () => {
           <div key={id} className="holdings">
             <p className="text-left">{holding.name}</p>
             <p>{holding.qty}</p>
-            <p>₹{holding.avg}</p>
+            <p className="max-lg:hidden">₹{holding.avg}</p>
             <p>₹{holding.qty * holding.avg}</p>
             <p
               className={
-                holding.price < holding.avg ? "text-red-400" : "text-green-500"
+                holding.price < holding.avg
+                  ? "text-red-400 max-lg:hidden"
+                  : "text-green-500 max-lg:hidden"
               }
             >
               {price ? holding.net : `₹${totalInvested}`}

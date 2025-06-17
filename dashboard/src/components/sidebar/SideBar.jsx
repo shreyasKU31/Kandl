@@ -8,6 +8,8 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import Element from "./Element";
+import AppsIcon from "@mui/icons-material/Apps";
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -20,12 +22,64 @@ const SideBar = () => {
           <DashboardIcon />
         </div>
         <div className="flex flex-col gap-2">
-          <Element icon={<HomeFilledIcon />} text={"Home"} />
-          <Element icon={<WorkIcon />} text={"Portfolio"} />
-          <Element icon={<InsightsIcon />} text={"Positions"} />
-          <Element icon={<AttachMoneyIcon />} text={"Orders"} />
-          <Element icon={<BookmarkIcon />} text={"Watchlist"} />
-          <Element icon={<AutoStoriesIcon />} text={"Reports"} />
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? " text-white font-medium bg-green-400 rounded hover:bg-green-400"
+                : ""
+            }
+          >
+            <Element icon={<HomeFilledIcon />} text={"Home"} />
+          </NavLink>
+          <NavLink
+            to="/holding"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<WorkIcon />} text={"Portfolio"} />
+          </NavLink>
+          <NavLink
+            to="/position"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<InsightsIcon />} text={"Positions"} />
+          </NavLink>
+          <NavLink
+            to="/order"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<AttachMoneyIcon />} text={"Orders"} />
+          </NavLink>
+          <NavLink
+            to="/watchlist"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<BookmarkIcon />} text={"Watchlist"} />
+          </NavLink>
+          <NavLink
+            to="/report"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<AutoStoriesIcon />} text={"Reports"} />
+          </NavLink>
+          <NavLink
+            to="/app"
+            className={({ isActive }) =>
+              isActive ? " text-white font-medium bg-green-400 rounded" : ""
+            }
+          >
+            <Element icon={<AppsIcon />} text={"Apps"} />
+          </NavLink>
         </div>
       </div>
       <div className="border-t-2 pt-4 flex flex-col gap-2">
