@@ -15,7 +15,7 @@ const Holdings = () => {
         <p className="text-left">Ticker Name</p>
         <p>Quantity</p>
         <p className="max-lg:hidden">Average Price</p>
-        <p className="max-lg:hidden">Total Price</p>
+        <p className="max-lg:hidden">Invested Amount</p>
         <p className="hover:cursor-pointer" onClick={handleView}>
           {price ? "Net Returns" : "Net Amount"}
         </p>

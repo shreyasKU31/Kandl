@@ -1,6 +1,7 @@
 const Holding = ({ holding, id, price }) => {
   let totalPrice = holding.qty * holding.avg;
-  let totalInvested = totalPrice + (totalPrice * parseInt(holding.net)) / 100;
+  let amountAfterReturns =
+    totalPrice + (totalPrice * parseInt(holding.net)) / 100;
   return (
     <div key={id} className="holdings">
       <p className="text-left">{holding.name}</p>
@@ -14,7 +15,7 @@ const Holding = ({ holding, id, price }) => {
             : "text-green-500 max-lg:hidden"
         }
       >
-        {price ? holding.net : `₹${totalInvested}`}
+        {price ? holding.net : `₹${amountAfterReturns}`}
       </p>
       <p
         className={
