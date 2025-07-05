@@ -3,7 +3,8 @@ import "dotenv/config";
 const app = express();
 import mongoose from "mongoose";
 import Holdings from "../model/Holdings.js";
-import watchList from "../model/watchlist.js";
+import WatchList from "../model/Watchlist.js";
+import Order from "../model/Orders.js";
 
 const connectDB = async () => {
   await mongoose.connect(process.env.MONGODB_URL);
@@ -94,6 +95,31 @@ app.get("/demo", (req, res) => {
       day: "+0.82",
     },
   ];
+
+  holdings.forEach((holding) => {
+    let newHolding = new Holdings({
+      name: holding.name,
+      qty: holding.qty,
+      avg: holding.avg,
+      price: holding.price,
+      net: holding.net,
+      day: holding.day,
+    });
+
+    newHolding
+      .save()
+      .then(() => {
+        console.log("Holding saved successfully.");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+  res.send(`${process.env.MONGODB_URL}`);
+});
+
+app.get("/addWatchlist", (req, res) => {
   const watchlistData = [
     {
       name: "DMART",
@@ -150,29 +176,8 @@ app.get("/demo", (req, res) => {
       isDown: false,
     },
   ];
-
-  holdings.forEach((holding) => {
-    let newHolding = new Holdings({
-      name: holding.name,
-      qty: holding.qty,
-      avg: holding.avg,
-      price: holding.price,
-      net: holding.net,
-      day: holding.day,
-    });
-
-    newHolding
-      .save()
-      .then(() => {
-        console.log("Holding saved successfully.");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
-
   watchlistData.forEach((watch) => {
-    let newWatch = new watchList({
+    let newWatch = new WatchList({
       name: watch.name,
       qty: watch.qty,
       percent: watch.percent,
@@ -188,8 +193,53 @@ app.get("/demo", (req, res) => {
         console.log(err);
       });
   });
+});
 
-  res.send(`${process.env.MONGODB_URL}`);
+app.get("/addOrders", (req, res) => {
+  const ordersData = [
+    {
+      name: "TCS",
+      qty: 10,
+      price: 3500.0,
+      type: "BUY",
+    },
+    {
+      name: "INFY",
+      qty: 5,
+      price: 1500.0,
+      type: "SELL",
+    },
+    {
+      name: "HDFCBANK",
+      qty: 20,
+      price: 1600.0,
+      type: "BUY",
+    },
+    {
+      name: "RELIANCE",
+      qty: 15,
+      price: 2500.0,
+      type: "SELL",
+    },
+  ];
+  ordersData.forEach((order) => {
+    let newOrder = new Order({
+      name: order.name,
+      qty: order.qty,
+      price: order.price,
+      type: order.type,
+    });
+
+    newOrder
+      .save()
+      .then(() => {
+        console.log("Order saved successfully.");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+  res.send("Data Upload Successful.");
 });
 
 app.listen(3000, () => {

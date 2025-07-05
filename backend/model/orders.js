@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import orderScema from "../schema/ordersSchema";
+import orderScema from "../schema/ordersSchema.js";
 
-const order = new mongoose.model("order", orderScema);
+const Order = mongoose.model("order", orderScema);
 
-export default order;
+export default Order;
