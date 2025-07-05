@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import watchlistSchema from "../schema/watchlistScema.js";
 
-const watchList = mongoose.model("watchlist", watchlistSchema);
+const WatchList = mongoose.model("watchlist", watchlistSchema);
 
-export default watchList;
+export default WatchList;

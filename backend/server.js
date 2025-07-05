@@ -6,7 +6,7 @@ const app = express();
 const port = 4000;
 import cors from "cors";
 import bodyParser from "body-parser";
-import watchList from "./model/watchlist.js";
+import watchList from "./model/Watchlist.js";
 
 app.use(cors());
 app.use(bodyParser.json());
