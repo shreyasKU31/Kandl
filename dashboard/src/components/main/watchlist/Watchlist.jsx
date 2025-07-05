@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import HoverCard from "./hoverCard";
 
 const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([]);
+  const [hover, setHover] = useState({});
 
   useEffect(() => {
     axios.get("http://localhost:4000/watchlist").then((res) => {
@@ -21,7 +23,12 @@ const Watchlist = () => {
         <p className="hover:cursor-pointer">Today</p>
       </div>
       {watchlist.map((position, id) => (
-        <div key={id} className="watchlist">
+        <div
+          key={id}
+          className="watchlist"
+          onMouseOver={() => setHover(position)}
+          onMouseOut={() => setHover({})}
+        >
           <p className="text-left">{position.name}</p>
           <p
             className={
@@ -33,6 +40,7 @@ const Watchlist = () => {
             ₹{position.price}
           </p>
           <p>{position.percent}</p>
+          {hover.name === position.name && <HoverCard stock={position} />}
         </div>
       ))}
     </div>
