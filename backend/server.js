@@ -6,6 +6,7 @@ const app = express();
 const port = 4000;
 import cors from "cors";
 import bodyParser from "body-parser";
+import watchList from "./model/watchlist.js";
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -28,6 +29,10 @@ app.get("/", (req, res) => {
 app.get("/holdings", async (req, res) => {
   const holdings = await Holdings.find({});
   res.send(holdings);
+});
+app.get("/watchlist", async (req, res) => {
+  const watchlist = await watchList.find({});
+  res.send(watchlist);
 });
 
 app.listen(port, () => {

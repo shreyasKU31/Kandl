@@ -1,5 +1,15 @@
-import { watchlist } from "../../../data/data";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 const Watchlist = () => {
+  const [watchlist, setWatchlist] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/watchlist").then((res) => {
+      setWatchlist(res.data);
+    });
+  }, []);
+
   return (
     <div>
       <div>
