@@ -1,11 +1,17 @@
 import express from "express";
 import "dotenv/config";
 import mongoose from "mongoose";
+import Holdings from "./model/Holdings.js";
 const app = express();
 const port = 4000;
+import cors from "cors";
+import bodyParser from "body-parser";
+
+app.use(cors());
+app.use(bodyParser.json());
 
 const connectDB = async () => {
-  await mongoose.connect("mongodb://127.0.0.1:27017/kandl");
+  await mongoose.connect(process.env.MONGODB_URL);
 };
 connectDB()
   .then(() => {
@@ -17,6 +23,11 @@ connectDB()
 
 app.get("/", (req, res) => {
   res.send("Server");
+});
+
+app.get("/holdings", async (req, res) => {
+  const holdings = await Holdings.find({});
+  res.send(holdings);
 });
 
 app.listen(port, () => {
