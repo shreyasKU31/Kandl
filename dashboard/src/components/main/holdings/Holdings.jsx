@@ -1,10 +1,18 @@
-import { useState } from "react";
-import { holdings } from "../../../data/data";
+import { useState, useEffect } from "react";
 import Holding from "./Holding";
+import axios from "axios";
 
 const Holdings = () => {
   const [price, setPrice] = useState(false);
   const handleView = () => setPrice(!price);
+
+  const [holdings, setHoldings] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/holdings").then((res) => {
+      setHoldings(res.data);
+    });
+  }, []);
 
   return (
     <div>
@@ -23,7 +31,7 @@ const Holdings = () => {
         <p>1day Returns</p>
       </div>
       {holdings.map((holding, id) => (
-        <Holding holding={holding} id={id} price={price} />
+        <Holding key={id} holding={holding} id={id} price={price} />
       ))}
     </div>
   );
