@@ -1,6 +1,25 @@
-import React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 export default function TradeModal({ stock, type, onClose }) {
+  const [quantity, setQuantity] = useState(1);
+  const [orderType, setOrderType] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    axios
+      .post("http://localhost:4000/buy", {
+        name: stock.name,
+        qty: quantity,
+        price: stock.price,
+        type: orderType,
+      })
+      .then(() => {
+        console.log("Data sent");
+      });
+    console.log(quantity, orderType);
+  }
+
   return (
     <div
       className="fixed inset-0 bg-opacity-40 flex items-center justify-center z-50"
@@ -14,21 +33,29 @@ export default function TradeModal({ stock, type, onClose }) {
           className="absolute top-2 right-2 text-gray-500 hover:text-black"
           onClick={onClose}
         >
-          ×
+          X
         </button>
         <h2 className="text-xl font-semibold mb-2">
           {type === "buy" ? "Buy" : "Sell"} {stock.name}
         </h2>
         <p className="text-gray-600 mb-4">Market Price: ₹{stock.price}</p>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="inline-flex items-center">
-              <input type="checkbox" className="form-checkbox mr-2" />
+              <input
+                type="checkbox"
+                className="form-checkbox mr-2"
+                name="intraday"
+              />
               Intraday
             </label>
             <label className="inline-flex items-center ml-4">
-              <input type="checkbox" className="form-checkbox mr-2" />
+              <input
+                type="checkbox"
+                className="form-checkbox mr-2"
+                name="delivery"
+              />
               Delivery
             </label>
           </div>
@@ -40,12 +67,18 @@ export default function TradeModal({ stock, type, onClose }) {
               min="1"
               className="w-full border rounded px-3 py-2"
               placeholder="Enter quantity"
+              name="quantity"
+              onChange={(e) => setQuantity(e.target.value)}
             />
           </div>
 
           <div>
             <label className="block text-sm font-medium mb-1">Order Type</label>
-            <select className="w-full border rounded px-3 py-2">
+            <select
+              className="w-full border rounded px-3 py-2"
+              name="type"
+              onChange={(e) => setOrderType(e.target.value)}
+            >
               <option value="market">Market</option>
               <option value="limit">Limit</option>
               <option value="stoploss">Stop Loss</option>
