@@ -1,5 +1,6 @@
 import assets from "../../assets/assets";
 import Button from "../Buttons/Button";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,7 +15,9 @@ const Hero = () => {
           bonds, and more.
         </p>
       </div>
-      <Button text={"Sign up for free"} />
+      <NavLink to={"/register"}>
+        <Button text={"Sign up for free"} />
+      </NavLink>
     </div>
   );
 };

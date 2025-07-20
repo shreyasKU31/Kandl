@@ -9,6 +9,7 @@ import Products from "./components/Products/Products.jsx";
 import About from "./components/About/About.jsx";
 import Pricing from "./components/Pricing/Pricing.jsx";
 import Support from "./components/Support/Support.jsx";
+import Register from "./components/Signup/Register.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/product" element={<Products />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
     <Footer />
