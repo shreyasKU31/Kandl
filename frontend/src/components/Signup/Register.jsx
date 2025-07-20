@@ -12,7 +12,7 @@ const Register = () => {
     e.preventDefault();
     const response = await axios.post("http://localhost:4000/register", data);
     if (response.data.success) {
-      window.location.href = "http://localhost:5174/holding";
+      window.location.href = "http://localhost:5173/holding";
     } else {
       alert("User Already Registered");
     }

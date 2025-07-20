@@ -4,13 +4,14 @@ import {
   getHoldings,
   getOrders,
   getWatchList,
-} from "../controllers/dataController";
-import isLoggedIn from "../middleware/authMiddleware.js";
+} from "../controllers/dataController.js";
 
 const router = express.Router();
 
-router.get("/holdings", isLoggedIn, getHoldings);
-router.get("/watchlist", isLoggedIn, getWatchList);
-router.get("/order", isLoggedIn, getOrders);
+router.get("/holdings", getHoldings);
+router.get("/watchlist", getWatchList);
+router.get("/order", getOrders);
 
-router.post("/buy", isLoggedIn, buyStock);
+router.post("/buy", buyStock);
+
+export default router;

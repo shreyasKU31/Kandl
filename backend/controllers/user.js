@@ -1,3 +1,5 @@
+import User from "../model/User.js";
+
 export const registerUser = async (req, res) => {
   try {
     if (!username || !email || !password) {
@@ -9,12 +11,6 @@ export const registerUser = async (req, res) => {
     const { username, email, password } = req.body;
     const newUser = new User({ username, email });
     const registerUser = await User.register(newUser, password);
-
-    req.logIn(registerUser, (e) => {
-      if (err) {
-        return next(e);
-      }
-    });
   } catch (err) {
     res.send("Some error : ", err.message);
   }
